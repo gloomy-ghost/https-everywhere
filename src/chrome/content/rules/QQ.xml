@@ -1,6 +1,7 @@
 <!--
-	For rules causing MCB, see QQ.com-mixedcontent.xml.
-	For only avaiable in China : Tencent_CN.xml
+	For rules causing MCB: QQ.com-mixedcontent.xml.
+	For only avaiable in China: Tencent_CN.xml
+	For rules causing test fails: QQ.com-Problematic.xml
 
 	CDN buckets:
 
@@ -49,6 +50,7 @@
 			- iwan		403
 			- jq *
 			- lbs *
+			- live *
 			- m	 ²
 			- bbs.m *
 			- yun.m	 ²
@@ -251,10 +253,6 @@
 		<test url="http://pcbrowser.dd.qq.com/pcbrowserbig/qbextension/update/20150924/pioclpoplcdbaefihamjohnefbikjilc.crx" />
 
 	<target host="exmail.qq.com" />
-	<target host="en.exmail.qq.com" />
-	<target host="m.exmail.qq.com" />
-	<target host="open.exmail.qq.com" />
-	<!-- May stop the auto check : https://travis-ci.org/EFForg/https-everywhere/jobs/157928826#L257 -->
 	<target host="edu.exmail.qq.com" />
 		<test url="http://edu.exmail.qq.com/cgi-bin/sellonlinestatic" />
 	<target host="hao.qq.com" />
@@ -268,7 +266,6 @@
 		<test url="http://x.l.qq.com/unique.swf" />
 		<test url="http://x.l.qq.com/web/jsproxy/uuser.html" />
 	<target host="list.qq.com" />
-	<target host="live.qq.com" />
 	<target host="mail.qq.com" />
 	<target host="en.mail.qq.com" />
 	<target host="i.mail.qq.com" />
@@ -303,7 +300,6 @@
 	<target host="support.qq.com" />
 	<target host="open.t.qq.com" />
 	<target host="tajs.qq.com" />
-	<!--target host="cache.tv.qq.com" /-->
 	<target host="v.qq.com" />
 		<!--	Mixcontented but break nothing.	-->
 		<exclusion pattern="^http://v\.qq\.com/(?!x/)" />
