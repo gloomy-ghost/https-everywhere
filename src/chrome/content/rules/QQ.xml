@@ -45,8 +45,8 @@
 			- follow.v.t        *
 			- bbs.vip           *
 			- ncgi.video        ²
+			- vhotlx.video      ²	https://vhotlx.video.qq.com/flv/200/177/q0022shm81k.p201.2.mp4
 			- weixiao           *
-			- wpa               *
 			- xg                *
 			- yanchu            *
 			- cgi.yanchu        *
@@ -207,6 +207,8 @@
 	<target host="combo.b.qq.com" />
 		<!-- Get from http://www.geetest.com/ -->
 		<test url="http://combo.b.qq.com/da/id.html" />
+	<target host="wpa.b.qq.com" />
+		<test url="http://wpa.qq.com/cgi/wpa.php" />
 	<target host="byod.qq.com" />
 	<target host="connect.qq.com" />
 	<target host="js01.daoju.qq.com" />
@@ -220,6 +222,8 @@
 	<target host="hao.qq.com" />
 	<target host="im.qq.com" />
 	<target host="imgcache.qq.com" />
+	<target host="view.inews.qq.com" />
+		<test url="http://view.inews.qq.com/a/TEC2016121302749602" />
 	<target host="isdspeed.qq.com" />
 		<test url="http://isdspeed.qq.com/cgi-bin/r.cgi" />
 	<target host="jqmt.qq.com" />
@@ -246,6 +250,7 @@
 		<test url="http://map.qq.com/jiejing/home.html" />
 		<test url="http://map.qq.com/#pano=100432J7150331222813400" />
 	<target host="apis.map.qq.com" />
+	<target host="confinfo.map.qq.com" />
 	<target host="open.map.qq.com" />
 	<target host="pr.map.qq.com" />
 	<target host="s.map.qq.com" />
@@ -278,10 +283,14 @@
 	<target host="tajs.qq.com" />
 	<target host="v.qq.com" />
 		<!--	Mixcontented but break nothing.	-->
-		<exclusion pattern="^http://v\.qq\.com/(?!x/)" />
+		<exclusion pattern="^http://v\.qq\.com/(?!iframe/|x/)" />
+			<test url="http://v.qq.com/iframe/player.html" />
+			<test url="http://v.qq.com/iframe/tvp.config.js" />
 			<test url="http://v.qq.com/x/cover/jj0y3okpdfg82b3/z0021zgdwqa.html" />
 			<test url="http://v.qq.com/x/cover/zf2z0xpqcculhcz/t001688s8yi.html" />
 			<test url="http://v.qq.com/movie/" />
+			<test url="http://v.qq.com/tv/korea/" />
+			<test url="http://v.qq.com/variety/" />
 		<target host="c.v.qq.com" />
 			<test url="http://c.v.qq.com/vuserinfo" />
 	<target host="video.qq.com" />
@@ -302,6 +311,7 @@
 			<test url="http://tj.video.qq.com/fcgi-bin/set_cookie?otype=json" />
 		<target host="vpic.video.qq.com" />
 		<target host="vpdata.video.qq.com" />
+		<target host="vv.view.qq.com" />
 	<target host="weread.qq.com" />
 	<target host="weixin.qq.com" />
 		<target host="api.weixin.qq.com" />
@@ -313,6 +323,7 @@
 		<target host="webpush.weixin.qq.com" />
 	<target host="weixin110.qq.com" />
 	<target host="wj.qq.com" />
+	<target host="wpa.qq.com" />
 	<target host="img1.write.qq.com" />
 		<test url="http://img1.write.qq.com/upload/cover/2016-09-26/cs_57e8da4a552c6.jpg" />
 	<target host="wx.qq.com" />
