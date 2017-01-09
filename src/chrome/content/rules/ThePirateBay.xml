@@ -27,8 +27,6 @@ www.oldpiratebay.org timed out
 	<target host="kanyebay.com" />
 	<target host="www.kanyebay.com" />
 
-	<target host="proxybay.la" />
-	<target host="www.proxybay.la" />
 	<target host="tpb.run" />
 	<target host="www.tpb.run" />
 	

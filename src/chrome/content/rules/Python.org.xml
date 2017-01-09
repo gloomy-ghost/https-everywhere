@@ -22,10 +22,7 @@
 
 	<!--	Direct rewrites:
 				-->
-	<target host="python.org" />
 	<target host="bugs.python.org" />
-	<target host="docs.python.org" />
-	<target host="hg.python.org" />
 	<target host="mail.python.org" />
 	<target host="packages.python.org" />
 	<target host="packaging.python.org" />

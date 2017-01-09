@@ -75,9 +75,6 @@
 		<!-- need this exclusion otherwise the test checker will use the hosts as test urls -->
 		<exclusion pattern="^http://(www\.)?gmodules\.com/$" />
 
-	<target host="click.google-analytics.com" />
-	<target host="www.google-analytics.com" />
-	<target host="ssl.google-analytics.com" />
 
 	<target host="ajax.googleapis.com" />
 		<!-- The implicit test URL at the root of this domain generates a 404.

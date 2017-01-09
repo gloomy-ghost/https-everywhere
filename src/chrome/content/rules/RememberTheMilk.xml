@@ -8,7 +8,6 @@
 -->
 <ruleset name="Remember the Milk">
 
-	<target host="rememberthemilk.com" />
 	<target host="*.rememberthemilk.com" />
 	<target host="rememberthemilk.jp" />
 	<target host="www.rememberthemilk.jp" />

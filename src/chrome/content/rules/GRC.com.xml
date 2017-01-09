@@ -17,9 +17,7 @@
 -->
 <ruleset name="GRC.com">
 
-	<target host="grc.com" />
 	<target host="media.grc.com" />
-	<target host="www.grc.com" />
 
 
 	<!--	Not secured by server:

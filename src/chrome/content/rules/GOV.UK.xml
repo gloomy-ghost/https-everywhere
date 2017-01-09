@@ -470,8 +470,6 @@
 <ruleset name="GOV.UK">
 
 	<target host="gov.uk" />
-	<target host="blog.gov.uk" />
-	<target host="*.blog.gov.uk" />
 	<target host="www.gov.uk" />
 
 

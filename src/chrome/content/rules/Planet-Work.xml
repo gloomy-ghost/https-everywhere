@@ -16,7 +16,6 @@ Fetch error: http://www.planet-work.fr/ => https://www.planet-work.com/: (28, 'O
 <ruleset name="Planet-Work" default_off='failed ruleset test'>
 
 	<target host="planet-work.*" />
-	<target host="*.planet-work.com" />
 	<target host="www.planet-work.fr" />
 
 
