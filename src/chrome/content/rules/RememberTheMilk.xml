@@ -8,11 +8,12 @@
 -->
 <ruleset name="Remember the Milk">
 
-	<target host="rememberthemilk.com" />
 	<target host="*.rememberthemilk.com" />
+		<test url="http://api.rememberthemilk.com/" />
 	<target host="rememberthemilk.jp" />
 	<target host="www.rememberthemilk.jp" />
 	<target host="*.rtmcdn.net" />
+		<test url="http://s1.rtmcdn.net/" />
 
 
 	<securecookie host="^\.rememberthemilk\.com$" name=".*" />
@@ -30,4 +31,3 @@
 		to="https://s$1.rtmcdn.net/" />
 
 </ruleset>
-

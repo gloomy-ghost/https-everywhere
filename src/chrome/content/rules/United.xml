@@ -42,12 +42,9 @@
 
 	<!--	Direct rewrites:
 				-->
-  <target host="united.com" />
 	<target host="cruises.united.com" />
 	<target host="hub.united.com" />
-	<target host="mobile.united.com" />
   <target host="pss.united.com" />
-  <target host="www.united.com" />
 
 
 	<!--	Not secured by server:

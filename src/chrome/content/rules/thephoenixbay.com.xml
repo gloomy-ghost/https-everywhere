@@ -413,8 +413,6 @@ tpb.disposable.name non-2xx http code
 	<target host="thepiratebay.ar.com" />
 	<target host="thepiratebay.ae.org" />
 	<target host="pirateahoy.eu" />
-	<target host="pirateproxy.tv" />
-	<target host="www.pirateproxy.tv" />
 	<target host="piratehole.com" />
 	<target host="www.piratehole.com" />
 	<target host="thepiratebay.mg" />
@@ -422,8 +420,6 @@ tpb.disposable.name non-2xx http code
 	<target host="thepiratebay.kr.com" />
 	<target host="unblockthepiratebay.org" />
 	<target host="www.unblockthepiratebay.org" />
-	<target host="thehiddenbay.eu" />
-	<target host="www.thehiddenbay.eu" />
 	<target host="thepiratebay.eu.com" />
 	<target host="magnetsearch.org" />
 	<target host="www.magnetsearch.org" />

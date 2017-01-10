@@ -17,7 +17,6 @@
 
 -->
 <ruleset name="Healthcare.gov">
-    <target host="healthcare.gov" />
     <target host="*.healthcare.gov" />
 
 		<test url="http://billing.healthcare.gov/" />

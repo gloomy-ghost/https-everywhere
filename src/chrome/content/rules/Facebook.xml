@@ -68,7 +68,6 @@
 
 	<!--	Direct rewrites:
 				-->
-	<target host=              "facebook.com" />
 	<target host=  "s-static.ak.facebook.com" />
 	<target host="b.s-static.ak.facebook.com" />
 	<target host=          "api.facebook.com" />

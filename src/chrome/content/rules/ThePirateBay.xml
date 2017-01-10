@@ -27,14 +27,9 @@ www.oldpiratebay.org timed out
 	<target host="kanyebay.com" />
 	<target host="www.kanyebay.com" />
 
-	<target host="proxybay.la" />
-	<target host="www.proxybay.la" />
 	<target host="tpb.run" />
 	<target host="www.tpb.run" />
 	
-	<rule from="^http://www\.proxybay\.la/"
-		to="https://proxybay.la/" />
-
 	<target host="thepiratebay-proxylist.org" />
 	<target host="www.thepiratebay-proxylist.org" />
 

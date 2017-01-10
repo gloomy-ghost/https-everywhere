@@ -3,10 +3,6 @@ pirateproxy.press non-2xx http code
 -->
 <!--The Pirate Bay proxies from proxyportal.org Main ruleset: ThePirateBay.xml-->
 <ruleset name="proxyportal.org">
-	<target host="proxyportal.org" />
-	<target host="www.proxyportal.org" />
-	<target host="piratebit.tech" />
-	<target host="www.piratebit.tech" />
 	<target host="www.pirateproxy.press" />
 	<target host="baymirror.date" />
 	<target host="www.baymirror.date" />
@@ -33,32 +29,11 @@ pirateproxy.press non-2xx http code
 	<target host="pirateproxy.site" />
 	<target host="www.pirateproxy.site" />
 	<target host="thepiratebay.unblocked.stream" />
-	<target host="thepiratebay.unblocked.date" />
 	<target host="thepiratebay.unblocked.host" />
-	<target host="thepiratebay.unblocked.faith" />
-	<target host="thepiratebay.bypassed.faith" />
-	<target host="thepiratebay.bypassed.host" />
-	<target host="thepiratebay.bypassed.me" />
-	<target host="thepiratebay.bypassed.org" />
-	<target host="thepiratebay.bypassed.bid" />
-	<target host="thepiratebay.bypassed.date" />
-	<target host="thepiratebay.bypassed.download" />
-	<target host="thepiratebay.bypassed.club" />
-	<target host="thepiratebay.bypassed.online" />
-	<target host="thepiratebay.bypassed.party" />
 	<target host="thepiratebay.bypassed.press" />
-	<target host="thepiratebay.bypassed.pw" />
-	<target host="thepiratebay.bypassed.site" />
-	<target host="thepiratebay.immunicity.host" />
-	<target host="thepiratebay.immunicity.win" />
 	<target host="thepiratebay.immunicity.top" />
 	<target host="thepiratebay.immunicity.press" />
-	<target host="thepiratebay.immunicity.online" />
-	<target host="thepiratebay.immunicity.date" />
 	<target host="thepiratebay.immunicity.party" />
-	<target host="thepiratebay.skillproxy.com" />
-	<target host="thepiratebay.skillproxy.net" />
-	<target host="thepiratebay.skillproxy.org" />
 	<target host="thepiratebay.unblockerproxy.xyz" />
 	<target host="thepiratebay.webypass.xyz" />
 

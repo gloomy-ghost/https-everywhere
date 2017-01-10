@@ -71,7 +71,6 @@
 -->
 <ruleset name="WordPress (partial)">
 
-	<target host="wordpress.com" />
 	<target host="*.wordpress.com" />
 		<exclusion pattern="^http://(?:[^/:@\.]+\.)?wordpress\.com/latex\.php(?:\?.*)?$" />
 		<!--

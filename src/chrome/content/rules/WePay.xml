@@ -11,14 +11,18 @@
 -->
 <ruleset name="WePay (partial)">
 
-	<target host="wepay.com" />
 	<target host="*.wepay.com" />
+		<test url="http://www.wepay.com/" />
+		<test url="http://stage.wepay.com/" />
+		<test url="http://static.wepay.com/" />
+		<test url="http://support.wepay.com/" />
+		<test url="http://t.wepay.com/" />
 
 
 	<securecookie host="^.+\.wepay\.com$" name=".+" />
 
 
-	<rule from="^http://((?:stage|static|support|t|www)\.)?wepay\.com/"
+	<rule from="^http://((?:stage|static|support|t|www)\.)wepay\.com/"
 		to="https://$1wepay.com/" />
 
 </ruleset>
