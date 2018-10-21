@@ -23,13 +23,14 @@ if [ $UID != 0 ]; then
 fi
 
 if type apt-get >/dev/null ; then
-  PIP_DO_NOT_INSTALL="y"
+  PIP_SKIP_REQUIREMENTS="y"
   $SUDO_SHIM apt-get update
   $SUDO_SHIM apt-get install -y lsb-release libxml2-dev libxml2-utils \
     libxslt1-dev python3-dev zip sqlite3 libcurl4-openssl-dev         \
-    xvfb libssl-dev git curl firefox-esr chromium-driver python3-lxml \
-    python3-pycurl python3-regex python3-bsdiff4 python3-levenshtein  \
+    xvfb libssl-dev git curl firefox-esr chromium-driver python3-pip \
+    python3-pycurl python3-regex python3-lxml python3-levenshtein  \
     python3-tldextract python3-selenium python3-pytest python3-xvfbwrapper
+  pip3 install --user bsdiff4
   if ! type geckodriver >/dev/null; then
     curl -LO "https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz"
     tar -zxvf "geckodriver-v0.23.0-linux64.tar.gz"
@@ -85,7 +86,7 @@ git submodule init
 git submodule update
 
 # Install Python packages
-if [ "$PIP_DO_NOT_INSTALL" != "y" ]; then
+if [ "$PIP_SKIP_REQUIREMENTS" != "y" ]; then
   pip3 install --user -r requirements.txt
   cd test/rules
   pip3 install --user -r requirements.txt
