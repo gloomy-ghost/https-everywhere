@@ -23,10 +23,13 @@ if [ $UID != 0 ]; then
 fi
 
 if type apt-get >/dev/null ; then
+  PIP_DO_NOT_INSTALL="y"
   $SUDO_SHIM apt-get update
   $SUDO_SHIM apt-get install -y lsb-release libxml2-dev libxml2-utils \
-    libxslt1-dev python3-dev zip sqlite3 python3-pip libcurl4-openssl-dev \
-    xvfb libssl-dev git curl firefox-esr chromium-driver
+    libxslt1-dev python3-dev zip sqlite3 libcurl4-openssl-dev         \
+    xvfb libssl-dev git curl firefox-esr chromium-driver python3-lxml \
+    python3-pycurl python3-regex python3-bsdiff4 python3-levenshtein  \
+    python3-tldextract python3-selenium python3-pytest python3-xvfbwrapper
   if ! type geckodriver >/dev/null; then
     curl -LO "https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz"
     tar -zxvf "geckodriver-v0.23.0-linux64.tar.gz"
@@ -82,13 +85,15 @@ git submodule init
 git submodule update
 
 # Install Python packages
-pip3 install --user -r requirements.txt
-cd test/rules
-pip3 install --user -r requirements.txt
-cd -
-cd test/chromium
-pip3 install --user -r requirements.txt
-cd -
+if [ "$PIP_DO_NOT_INSTALL" != "y" ]; then
+  pip3 install --user -r requirements.txt
+  cd test/rules
+  pip3 install --user -r requirements.txt
+  cd -
+  cd test/chromium
+  pip3 install --user -r requirements.txt
+  cd -
+fi
 
 # Install git hook to run tests before pushing.
 ln -sf ../../test.sh .git/hooks/pre-push
