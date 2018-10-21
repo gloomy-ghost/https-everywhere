@@ -24,26 +24,16 @@ fi
 
 if type apt-get >/dev/null ; then
   $SUDO_SHIM apt-get update
-  $SUDO_SHIM apt-get install -y lsb-release
-  BROWSERS="firefox chromium-browser"
-  CHROMEDRIVER="chromium-chromedriver"
-  if [[ "$(lsb_release -is)" == "Debian" ]]; then
-    # Iceweasel is the rebranded Firefox that Debian ships, and Chromium
-    # takes the name of 'chromium' instead of 'chromium-browser' in
-    # Debian 7 (wheezy) and later.
-    BROWSERS="iceweasel chromium"
-    CHROMEDRIVER="chromedriver"
-  fi
-  $SUDO_SHIM apt-get install -y libxml2-dev libxml2-utils libxslt1-dev \
-    python3-dev $BROWSERS zip sqlite3 python3-pip libcurl4-openssl-dev xvfb \
-    libssl-dev git curl $CHROMEDRIVER
+  $SUDO_SHIM apt-get install -y lsb-release libxml2-dev libxml2-utils \
+    libxslt1-dev python3-dev zip sqlite3 python3-pip libcurl4-openssl-dev \
+    xvfb libssl-dev git curl firefox-esr chromium-driver
   if ! type geckodriver >/dev/null; then
-    curl -LO "https://github.com/mozilla/geckodriver/releases/download/v0.17.0/geckodriver-v0.17.0-linux64.tar.gz"
-    tar -zxvf "geckodriver-v0.17.0-linux64.tar.gz"
-    rm -f "geckodriver-v0.17.0-linux64.tar.gz"
-    $SUDO_SHIM mv geckodriver /usr/bin/geckodriver
-    $SUDO_SHIM chown root /usr/bin/geckodriver
-    $SUDO_SHIM chmod 755 /usr/bin/geckodriver
+    curl -LO "https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz"
+    tar -zxvf "geckodriver-v0.23.0-linux64.tar.gz"
+    rm -f "geckodriver-v0.23.0-linux64.tar.gz"
+    $SUDO_SHIM mv geckodriver /usr/local/bin/geckodriver
+    $SUDO_SHIM chown root /usr/local/bin/geckodriver
+    $SUDO_SHIM chmod 755 /usr/local/bin/geckodriver
   fi
   if [ ! -f /usr/lib/chromium/chromedriver ] && [ -f `which chromedriver` ]; then
     $SUDO_SHIM ln -s `which chromedriver` /usr/lib/chromium/chromedriver
